@@ -18,7 +18,6 @@
     console.log 'stderr: ' + err
 
   spider.on 'exit', (code) ->
-
     Fiber(->
       _.some JSON.parse(list), (item) ->
         result = Doc.findOne({title: item.title, site: item.site})

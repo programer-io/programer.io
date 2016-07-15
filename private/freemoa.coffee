@@ -1,6 +1,9 @@
 
 casper = require('casper').create
-  clientScripts: ['node_modules/underscore/underscore-min.js']
+  clientScripts: [
+    'packages/jquery.js',
+    'node_modules/underscore/underscore-min.js'
+  ]
 
 url = 'http://www.freemoa.net/m4/s41?page=1'
 casper.start url

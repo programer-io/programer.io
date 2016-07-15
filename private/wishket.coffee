@@ -1,6 +1,9 @@
 
 casper = require('casper').create
-  clientScripts: ['node_modules/underscore/underscore-min.js']
+  clientScripts: [
+    'packages/jquery.js',
+    'node_modules/underscore/underscore-min.js'
+  ]
 
 url = 'https://www.wishket.com/project/'
 casper.start url

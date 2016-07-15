@@ -24,7 +24,6 @@ less
 accounts-password
 email
 
-
 # mongodb
 dburles:mongo-collection-instances  # get collection instance by name
 
