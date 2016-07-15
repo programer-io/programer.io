@@ -17,8 +17,26 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
+# base
 coffeescript
-ostrio:meteor-root
+dalgard:jade
+less
+accounts-password
+email
+
+
+# mongodb
+dburles:mongo-collection-instances  # get collection instance by name
+
+
+# router
+kadira:flow-router                  # client router
+kadira:blaze-layout                 # dynamic template helper
+arillo:flow-router-helpers          # flow router front helper
+
+# util
+random
+juliancwirko:s-alert
+juliancwirko:s-alert-stackslide
+copleykj:autolinker
 percolate:synced-cron

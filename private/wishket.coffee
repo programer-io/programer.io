@@ -17,6 +17,7 @@ casper.then ->
       item.price = $(project).find('.project-unit-basic-info span:nth-child(1)').text()
       item.title = $(project).find('.project-title').text()
       item.desc  = $(project).find('.project-unit-desc').text()
+      item.date  = new Date()
       item.tags  = _.map $(project).find('.project-skill'), (tag) ->
         return $(tag).text()
       return item

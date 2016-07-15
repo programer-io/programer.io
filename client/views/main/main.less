@@ -1,0 +1,220 @@
+@import "/client/styles/import.less";
+
+.main-header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background-color: @navy;
+  color: white;
+  z-index: 1000;
+
+  .title {
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+    margin-left: 30px;
+  }
+
+  .menu-dashboard {
+    float: right;
+    line-height: 70px;
+    font-size: 18px;
+    margin-right: 30px;
+  }
+}
+
+.main-container {
+  position: relative;
+  top: 0;
+  max-width: 100%;
+  height: 100%;
+  margin: 50px auto;
+  background-color: @color-body
+}
+
+.main-left-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  // max-width: 300px;
+  height: 100%;
+  background-color: @gray-light;
+}
+
+.main-right-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  // max-width: 400px;
+  height: 100%;
+  background-color: @gray-light;
+}
+
+.map-info-panel {
+  height: auto;
+  background-color: @dark-gray;
+  padding: 10px;
+  margin-top: 10px;
+
+  span {
+    color: white;
+  }
+}
+
+.map-container {
+  margin-top: 80px;
+  width: 100%;
+  height: 250px;
+
+  .map-blur-panel {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 250px;
+  }
+
+  button {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    border: 0;
+    z-index: 1000;
+    background-color: @yellow;
+    color: white;
+  }
+}
+
+.main-body {
+  position: relative;
+  height: 100%;
+  margin-top: 80px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: @color-body
+}
+
+
+.posts-container {
+
+}
+
+.post-create-form {
+  height: auto;
+  color: white;
+  margin: 10px;
+  color: @color-text;
+  background-color: white;
+
+  .post-create-form-header {
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid @gray-light;
+
+  }
+
+  .post-create-form-body {
+
+    textarea {
+      border-width: 0px;
+      font-size: 16px;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  .post-create-form-bottom {
+    height: 50px;
+    padding: 10px;
+
+
+    button {
+      background-color: @brand;
+      width: 150px;
+      height: 30px;
+      border-width: 0px;
+      color: white;
+    }
+
+    button[disabled="disabled"] {
+      background-color: @gray-light;
+    }
+  }
+}
+
+.map-pannel {
+  display: none;
+}
+
+.panel {
+  height: auto;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  color: @color-text;
+  background-color: white;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: @navy;
+  }
+  .desc {
+    color: @color-text;
+  }
+  .price {
+    font-weight: bold;
+  }
+
+  .tags {
+    margin: 20px 0 20px 0;
+
+    .tag {
+      display: inline-block;
+      margin: 5px 10px 5px 0px;
+      padding: 5px 10px 5px 10px;
+      border: 1px solid @gray-light;
+    }
+
+    .site {
+      background-color: @brand;
+      color: white;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .map-pannel {
+    display: block;
+  }
+
+  .main-left-side {
+    display: none;
+  }
+  .main-right-side {
+    display: none;
+  }
+  .main-body {
+    margin-top: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .map-container {
+    height: 200px;
+
+    button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: 0;
+      z-index: 1000;
+      background-color: @yellow;
+      color: white;
+    }
+  }
+}

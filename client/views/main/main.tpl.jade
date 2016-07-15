@@ -1,0 +1,34 @@
+// 컨텐츠
+#content
+  
+  .main-header
+    .title programer.io
+    
+    if currentUser
+      a#logout.menu-dashboard(href='') Logout
+      
+  
+  .main-container
+    unless isMobileSize
+      .main-left-side
+    
+    .main-body
+      +each projects
+        .panel
+          h2.title
+            a(href="{{url}}" target="_blank") {{title}}
+          p.price {{price}}
+          p.desc {{desc}}
+          p.url
+            a(href="{{url}}" target="_blank") 보러가기
+      
+          .tags
+            span.tag.site {{site}}
+            +each tags
+              span.tag {{this}}
+    
+          
+          
+    unless isMobileSize
+      .main-right-side
+      
