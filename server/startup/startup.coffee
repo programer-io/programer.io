@@ -4,6 +4,7 @@ Meteor.startup ->
     spider('wishket.coffee')
     spider('freemoa.coffee')
 
+  spiders()
   ########################################################
   # spider_wishket
   ########################################################
