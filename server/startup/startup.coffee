@@ -3,7 +3,6 @@ Meteor.startup ->
   @spiders = ->
     spider('wishket.coffee')
     spider('freemoa.coffee')
-    spider('androidpub.coffee')
 
   spiders()
   ########################################################
