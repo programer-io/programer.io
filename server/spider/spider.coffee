@@ -15,18 +15,16 @@
     list += data
 
   spider.stderr.on 'data', (err) ->
-    console.log 'stderr: ' + err
+
 
   spider.on 'exit', (code) ->
     Fiber(->
       _.some JSON.parse(list), (item) ->
         result = Doc.findOne({title: item.title, site: item.site})
         if(result)
-          console.log 'match...'
           return true
         else
           Doc.insert item
-          console.log('data is inserted: ', item)
           return false
     ).run()
 
