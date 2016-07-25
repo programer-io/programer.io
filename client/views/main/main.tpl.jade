@@ -16,7 +16,10 @@
       +each projects
         .panel
           h2.title
-            a(href="/project/{{_id}}") {{title}} ({{postCount _id}})
+            a(href="/project/{{_id}}")
+             span {{title}}
+              if postCount _id
+                span ({{postCount _id}})
           p.price {{price}}
           p.desc {{desc}}
           p.url
