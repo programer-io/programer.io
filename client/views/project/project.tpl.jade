@@ -2,32 +2,36 @@
 #content
   
   .main-header
-    .title programer.io
+    a.back(href="/") Back
+    a.title(href="/") 프로젝트 채널
     
-    if currentUser
-      a#logout.menu-dashboard(href='') Logout
-      
-  
   .main-container
     unless isMobileSize
       .main-left-side
     
     .main-body
-      +each projects
+      +with project
         .panel
           h2.title
-            a(href="/project/{{_id}}") {{title}} ({{postCount _id}})
+            a(href="{{url}}" target="_blank") {{title}}
           p.price {{price}}
           p.desc {{desc}}
           p.url
             a(href="{{url}}" target="_blank") 보러가기
+      
           .tags
             span.tag.site {{site}}
             +each tags
               span.tag {{this}}
-    
           
+      +createPost
+      
+      +each posts
+        .panel
+          h2.name {{text}}
+          p.desc {{date}}
           
+      
     unless isMobileSize
       .main-right-side
       

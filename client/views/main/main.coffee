@@ -10,7 +10,8 @@
 ########################################
 Template.main.onCreated ->
   log('main.onCreated')
-  @subscribe('projects');
+  @subscribe('projects')
+  @subscribe('postAll')
 
 Template.main.onRendered ->
   $(window).resize ->
@@ -23,6 +24,9 @@ Template.main.helpers
     return width.get() < 900
 
   projects: ->
-    return Doc.find()
+    return Doc.find({}, {sort: {date: -1}})
+
+  postCount: (id)->
+    return Post.find({project: id}).count()
 
 Template.main.events {}
